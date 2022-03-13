@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# メモ
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## rails7注目ポイント
+- webpacker卒業→フロントエンドが刷新
+    - node.js要らない
+    - scssファイル使えない
+    - cssファイルのまま、assers/imagesの画像の読み込み可能
+    - 色々なcssのオプションが利用できる？
+    - application.html.erbのjavascript行が異なる
+    - link_to でpost/deleteを利用できない
+        - button_to or 他の代案
+- TZInfo::DataSourceNotFound: tzinfo-data is not present.のエラーが起きる

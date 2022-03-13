@@ -14,10 +14,12 @@
       <ul>
         <li><%= link_to "ホーム", tweets_path %></li>
         <li><%= link_to "新規投稿",new_tweet_path %></li>
-        <% if user_signed_in? %>
-          <li><%= link_to "マイページへ", user_path(current_user.id) %></li>
-          <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-        <% end %>   
+          <% if user_signed_in? %>
+            <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "新規登録", new_user_registration_path %></li>
+            <li><%= link_to "ログイン", new_user_session_path %></li>
+          <% end %> 
       </ul>
       </div>
     </header>
@@ -25,7 +27,7 @@
       <%= yield %>
     </main>
     <footer>
-     <p>Copyright © GeekSalon All Rights Reserved.</p>
+      <p>Copyright © GeekSalon All Rights Reserved.</p>
     </footer>
   </body>
 </html>
